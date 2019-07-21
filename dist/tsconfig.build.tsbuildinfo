@@ -2114,7 +2114,7 @@
         "signature": "87c5a433521c49fd7ded283bb3f6a1991976f0b44009751dd39ebea612b56a35"
       },
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/tasks/task.entity.ts": {
-        "version": "67a545876a054b80d2f56c3c21e0d0479544d43e28ba39f7f64f4daeb21cd639",
+        "version": "521b1fe3032fe08201fd18fea2369b28c87209e461f8e39181b0c29a0e8a9927",
         "signature": "f5e2bfb78c47badac79244da63dbdbd27dcd88710a22804be0ab494cd6af5bd0"
       },
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/tasks/task.repository.ts": {
@@ -2177,12 +2177,20 @@
         "version": "1b6c96764a4637de8b098ab8059ca321d1e6e51138df7b6e0491acc1f4242779",
         "signature": "7c02fe0a4fc883c06b00d29d824c931f5e0314ba07bc26d074b27feb0aecd2b3"
       },
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts": {
+        "version": "1ee75a4b69bc5b197aba720a9c975ca95c9c9e166d384c3ac5a612166eada54d",
+        "signature": "4e3a067ab6d9d34926f96b94ea7a2506a2e47c4f1188dac1f887892a6f044d18"
+      },
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts": {
+        "version": "120f2d2deb8b157ab6b5e1836c515cb44c7a6bd57c579ca798dc1cd4731ce4db",
+        "signature": "c5b6720f358a89f0e054992e6170b57a72443a9af14428dfcca0448bfc96e680"
+      },
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts": {
-        "version": "107ea2ffe0cd165056f46498522b0baa4db6e0a7a1f3e4082f33610af68a66d4",
-        "signature": "8fc77f803f9a22fcfa6774bc62386393e51129388118d497d0eb503ca3a9cf95"
+        "version": "b3bf4abf9dde25f52bbfb0d188eadbaa5232fff829f1ffa699dc44256f61a734",
+        "signature": "c4a6420d47d546344df04db798bd62f0db5c33e989924044b420a63b96d3fccb"
       },
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.module.ts": {
-        "version": "9b047b2857c6807273384ddd7a7264cb539f99928c5cfd56379f947790bc5909",
+        "version": "74e00d4c704a0d3c8719557bc06751b3efa3577998f7b06e916717b64b2a8505",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1"
       },
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/app.module.ts": {
@@ -5827,8 +5835,21 @@
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts": [
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/typeorm/index.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts": [
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/typeorm/index.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts": [
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/common/index.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/typeorm/index.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5836,6 +5857,8 @@
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/common/index.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.controller.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/typeorm/index.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -9528,6 +9551,13 @@
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/config/typeorm.config.ts": [
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/typeorm/index.d.ts"
       ],
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts": [
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/typeorm/index.d.ts"
+      ],
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts": [
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/typeorm/index.d.ts",
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts"
+      ],
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/common/index.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/common/interfaces/index.d.ts",
@@ -9785,6 +9815,9 @@
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/superagent/index.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/util.d.ts",
         "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts": [
+        "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -10332,8 +10365,8 @@
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/tasks/tasks.module.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/config/typeorm.config.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.controller.ts",
-      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts",
-      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.module.ts",
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.entity.ts",
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/user.repository.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/src/app.module.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@nestjs/core/adapters/index.d.ts",
@@ -10375,7 +10408,9 @@
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/jest/index.d.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/json5/index.d.ts",
       "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/superagent/index.d.ts",
-      "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/supertest/index.d.ts"
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/node_modules/@types/supertest/index.d.ts",
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.service.ts",
+      "/users/aak01/projects/gitprojects/nestjs-task-manager/src/auth/auth.module.ts"
     ]
   },
   "version": "3.4.3"
