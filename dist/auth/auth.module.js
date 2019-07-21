@@ -7,19 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const tasks_module_1 = require("./tasks/tasks.module");
-const typeorm_1 = require("@nestjs/typeorm");
-const typeorm_config_1 = require("./config/typeorm.config");
-const auth_module_1 = require("./auth/auth.module");
-let AppModule = class AppModule {
+const auth_controller_1 = require("./auth.controller");
+const auth_service_1 = require("./auth.service");
+let AuthModule = class AuthModule {
 };
-AppModule = __decorate([
+AuthModule = __decorate([
     common_1.Module({
-        imports: [
-            typeorm_1.TypeOrmModule.forRoot(typeorm_config_1.typeOrmConfig),
-            tasks_module_1.TasksModule, auth_module_1.AuthModule,
-        ],
+        controllers: [auth_controller_1.AuthController],
+        providers: [auth_service_1.AuthService],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], AuthModule);
+exports.AuthModule = AuthModule;
+//# sourceMappingURL=auth.module.js.map
