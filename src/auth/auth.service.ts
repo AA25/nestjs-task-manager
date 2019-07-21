@@ -7,5 +7,5 @@ export class AuthService {
   constructor(
     @InjectRepository(UserRepository) // inject an instance into the userRepo param
     private userRepository: UserRepository,
-  ){}
+  ) {}
 }
