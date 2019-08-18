@@ -24,8 +24,11 @@ export class TasksController {
   }
 
   @Get('/:id') // : tells nJS it may used later in the code
-  getTaskById(@Param('id', ParseIntPipe) id: number): Promise<Task> { // Pipe parses id into an int at runtime
-    return this.tasksService.getTaskById(id);
+  getTaskById(
+    @Param('id', ParseIntPipe) id: number,
+    @GetUser() user: User,
+  ): Promise<Task> { // Pipe parses id into an int at runtime
+    return this.tasksService.getTaskById(id, user);
   }
 
   @Post()
@@ -50,7 +53,8 @@ export class TasksController {
   updateTask(
     @Param('id', ParseIntPipe) id: number,
     @Body('status', TaskStatusVlidationPipe) status: TaskStatus, // NJS will create a new instance of the pipe
+    @GetUser() user: User,
   ): Promise<Task> {
-    return this.tasksService.updateStatus(id, status);
+    return this.tasksService.updateStatus(id, status, user);
   }
 }

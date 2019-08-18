@@ -14,9 +14,9 @@ export class TasksService {
     private taskRepository: TaskRepository,
   ) {}
 
-  async getTaskById(id: number): Promise<Task> {
+  async getTaskById(id: number, user: User): Promise<Task> {
     // We retrieve the task from the repository - The persistance layer
-    const found = await this.taskRepository.findOne(id);
+    const found = await this.taskRepository.findOne({ where: { id, userId: user.id} });
 
     if (!found) {
       // Exception won't be caught here but propagate to the controller
@@ -50,8 +50,8 @@ export class TasksService {
     }
   }
 
-  async updateStatus(id: number, status: TaskStatus): Promise<Task> {
-    const task = await this.getTaskById(id);
+  async updateStatus(id: number, status: TaskStatus, user: User): Promise<Task> {
+    const task = await this.getTaskById(id, user);
     task.status = status;
     await task.save();
     return task;
