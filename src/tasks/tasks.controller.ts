@@ -44,8 +44,11 @@ export class TasksController {
   }
 
   @Delete('/:id')
-  deleteTask(@Param('id', ParseIntPipe) id: number): void {
-    this.tasksService.deleteTask(id);
+  deleteTask(
+    @Param('id', ParseIntPipe) id: number,
+    user: User,
+  ): void {
+    this.tasksService.deleteTask(id, user);
     // returning void is a 200 status
   }
 

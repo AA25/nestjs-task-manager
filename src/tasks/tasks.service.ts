@@ -43,8 +43,8 @@ export class TasksService {
     // // but this shouldn't be in the service layer but rather the persistance layer
   }
 
-  async deleteTask(id: number): Promise<void> {
-    const deleted = await this.taskRepository.deleteTask(id);
+  async deleteTask(id: number, user: User): Promise<void> {
+    const deleted = await this.taskRepository.deleteTask(id, user);
     if (deleted.affected === 0) {
       throw new NotFoundException(`Task with ID "${id}" not found`);
     }

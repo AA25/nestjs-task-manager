@@ -27,8 +27,9 @@ export class TaskRepository extends Repository<Task> {
     return task;
   }
 
-  async deleteTask(id: number): Promise<DeleteResult> {
-    return await this.delete(id);
+  async deleteTask(id: number, user: User): Promise<DeleteResult> {
+    // where clause not needed as id are unique
+    return await this.delete({id, userId: user.id});
   }
 
   async getTasks(
