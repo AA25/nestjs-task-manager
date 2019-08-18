@@ -20,4 +20,8 @@ export class Task extends BaseEntity {
   // There can be many tasks for one user
   @ManyToOne(type => User, user => user. tasks, { eager: false})
   user: User;
+
+  // This column in postgres was created for us by typeOrm due the relationship we added between users and tasks
+  @Column()
+  userId: number;
 }
