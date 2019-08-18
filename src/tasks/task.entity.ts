@@ -1,5 +1,6 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { TaskStatus } from './task-status.enum';
+import { User } from 'src/auth/user.entity';
 
 // Entites represent tables - They can carry logic under the hood to make it 'easy' to work with the db without writing queries
 @Entity()
@@ -15,4 +16,8 @@ export class Task extends BaseEntity {
 
   @Column()
   status: TaskStatus;
+
+  // There can be many tasks for one user
+  @ManyToOne(type => User, user => user. tasks, { eager: false})
+  user: User;
 }
