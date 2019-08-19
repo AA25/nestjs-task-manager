@@ -4,11 +4,14 @@ import { CreateTaskDto } from './dto/create-task.dto';
 import { TaskStatus } from './task-status.enum';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 import { User } from '../auth/user.entity';
+import { Logger, InternalServerErrorException } from '@nestjs/common';
 
 @EntityRepository(Task)
 // This is the repository for task - This is the persistance layer
 // the persistence layer is the set of classes that manage the actual reading and writing of data to persistent storage
 export class TaskRepository extends Repository<Task> {
+  private logger = new Logger('TaskRepository');
+
   async createTask(
       createTaskDto: CreateTaskDto,
       user: User,
@@ -20,10 +23,16 @@ export class TaskRepository extends Repository<Task> {
     task.description = description;
     task.status = TaskStatus.OPEN;
     task.user = user;
-    await task.save();
-    delete task.user;
+
+    try {
+      await task.save();
+    } catch (error) {
+      this.logger.error(`Failed to save task for user '${user.username}'. Data: ${createTaskDto}`, error.stack);
+      throw new InternalServerErrorException();
+    }
     // The above was done directly to the entity
     // but this shouldn't be in the service layer but rather the persistance layer
+    delete task.user;
     return task;
   }
 
@@ -50,7 +59,12 @@ export class TaskRepository extends Repository<Task> {
       query.andWhere('(task.title LIKE :search OR task.description LIKE :search)', { search: `%${search}%`});
     }
 
-    const tasks = await query.getMany();
-    return tasks;
+    try {
+      const tasks = await query.getMany();
+      return tasks;
+    } catch (error) {
+      this.logger.error(`Failed to get tasks for user '${user.username}'. Filters: ${JSON.stringify(filterDto)}`, error.stack);
+      throw new InternalServerErrorException();
+    }
   }
 }
