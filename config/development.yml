@@ -1,0 +1,10 @@
+# Can override default values in the default yaml
+# Or add values which will then be merged with defaults
+# Or have it specific for the development environment
+db:
+  host: 'localhost'
+  username: 'postgres'
+  password: 'postgres'
+  scynchronization: true
+jwt:
+  secret: 'exampleSecret'

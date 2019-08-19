@@ -1,0 +1,4 @@
+# Since this is production, sensitive data will be provided via env variables
+# and not through config files since its in the codebase
+db:
+  synchronize: false
