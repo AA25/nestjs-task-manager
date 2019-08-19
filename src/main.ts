@@ -12,7 +12,10 @@ async function bootstrap() {
   // The root module is the starting point of the application
   const app = await NestFactory.create(AppModule);
 
-  await app.listen(serverConfig.port);
+  // Assume env port variable before config port
+  // incase config port needs to be overriding for some reason
+  const port = process.env.PORT || serverConfig.port;
+  await app.listen(port);
   logger.log(`Application listening on port`);
 }
 bootstrap();

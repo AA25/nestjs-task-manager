@@ -5,6 +5,6 @@ db:
   host: 'localhost'
   username: 'postgres'
   password: 'postgres'
-  scynchronization: true
+  synchronize: true # not recommended in production
 jwt:
   secret: 'exampleSecret'
